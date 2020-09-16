@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Popup</title>
+</head>
+<body>
+
+
+    <div id="popup__overlay">
+        <div class="popup">
+            <div class="popup__head">
+                <div class="popup__head-text">Шутка дня №2020</div>
+                <div id="close" class="popup__head-btn">X</div>
+            </div>
+            <div class="popup_body">Не работает код? Не нужно переживать! Если все будет работать, то вы можете оказаться безработным.</div>
+            <div class="popup_footer">Brain workout...</div>
+        </div>
+    </div>
+
+
+    <button id="btn-popup">Popup me 😈</button>
+
+
+<script src="main.js"></script>
+
+<style>
+
+    body {
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        background: #000000;  /* fallback for old browsers */
+        background: linear-gradient(to right, #0f9b0f, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    #btn-popup {
+        font-size: 30px;
+        border: none;
+        background-color: #204c2c;
+        padding: 40px;
+        border-radius: 5px ;
+        color: #ffffff;
+        cursor: pointer;
+        transition: all 1.5s ease;
+    }
+
+    #btn-popup:hover {
+        border: 1px greenyellow solid;
+    }
+
+    #popup__overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0,0,0,0.85);
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: opacity .8s ease;
+        opacity: 0;
+        z-index: -999;
+    }
+
+    #popup__overlay.active {
+        opacity: 1;
+        z-index: 999;
+    }
+
+    #popup__overlay .popup {
+        border: 1px greenyellow solid;
+        padding: 30px 20px;
+        font-size: 25px;
+        font-family: "Comic Sans MS";
+        max-width: 500px;
+    }
+
+    .popup .popup__head {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 15px;
+        border-bottom: 1px greenyellow dashed;
+        margin-bottom: 25px;
+    }
+    .popup .popup__head-text {
+        color: #a7cf8f;
+    }
+    .popup .popup__head-btn {
+        cursor: pointer;
+    }
+    .popup .popup__head-btn:hover {
+        cursor: pointer;
+        color: red;
+    }
+    .popup .popup_body {
+        padding-bottom: 15px;
+        border-bottom: 1px greenyellow dashed;
+        margin-bottom: 25px;
+    }
+
+    .popup .popup_footer {
+        color: #a7cf8f;
+    }
+
+
+
+</style>
+
+</body>
+
+</html>
